@@ -1,7 +1,7 @@
 # swapsies
 Swap and Re-Order Divs Smoothly Using jQuery – Swapsies Plugin.  Forked from the great Steve Marks:
 
-        github:    https://github.com/BIOSTALL
+	github:    https://github.com/BIOSTALL
 	twitter:   @biostall
 	web:       http://biostall.com
 
