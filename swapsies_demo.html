@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script>  
+	<script src="js/jquery-swapsies.js" type="text/javascript"></script>  
+    <script type="text/javascript">
+      $(document).ready(function() {  
+    $(".go-swap").click(function() {  
+        $("#div_1").swap({  
+            target: "div_2", // Mandatory. The ID of the element we want to swap with  
+            opacity: "0.5", // Optional. If set will give the swapping elements a translucent effect while in motion  
+            speed: 700, // Optional. The time taken in milliseconds for the animation to occur  
+            callback: function() { // Optional. Callback function once the swap is complete  
+                alert("Swap Complete");  
+            }  
+        });  
+    });  
+    });  
+    </script>
+    <title>Swapsies Demo</title>
+</head>
+
+<body>
+    <div id="div_1">
+        THIS IS DIV 1
+    </div>
+
+    <div id="div_2">
+        THIS IS DIV 2
+    </div><a href="javascript://" class="go-swap">Go Swap!</a>
+</body>
+</html>
