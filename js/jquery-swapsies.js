@@ -69,7 +69,34 @@ var swapping = false;
 						var total_x = current_primary_left-current_secondary_left;
 					}
 					if (direction_primary_x=='-') { direction_secondary_x='+'; }else{ direction_secondary_x='-'; }
-					//
+
+				        var topY = total_y;
+                                        var bottomY = total_y;
+
+                                        if (height_difference < 0) {
+                                            if (direction_primary_y == '+') {
+                                                //top moving down, smaller than bottom
+                                                topY -= height_difference;
+                                                bottomY = total_y;
+                                            }
+                                            else {
+                                                //bottom moving up, smaller than top
+                                                topY = total_y;
+                                                bottomY += height_difference;
+                                            }
+                                        }
+                                        else {
+                                            if (direction_primary_y == '+') {
+                                                //top moving down, bigger than bottom
+                                                topY -= height_difference;
+                                                bottomY = total_y;
+                                            }
+                                            else {
+                                                //bottom moving up, bigger than top
+                                                topY = total_y;
+                                                bottomY += height_difference;
+                                            }
+                                        }
 					
 					// do swapping
 					obj.animate({
